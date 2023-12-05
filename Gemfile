@@ -38,6 +38,7 @@ gem "jbuilder"
 gem "hamlit"
 gem "simple_form"
 gem "annotate"
+gem "devise"
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
