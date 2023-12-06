@@ -21,10 +21,11 @@ RUN gem install bundler:2.2.21
 RUN bundle install
 
 # Instala paquetes de JavaScript usando Yarn
-RUN yarn add bootstrap jquery popper.js roboto-fontface
+RUN yarn add bootstrap jquery popper.js roboto-fontface vanilla-nested
 
 # Exponer el puerto 3000 para la aplicación Rails
 EXPOSE 3000
 
 # Comando por defecto al ejecutar el contenedor
-CMD ["bash"]
+CMD ["bash","-c", "rm -f tmp/pids/server.pid"]
+# CMD ["bash", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"]

@@ -13,6 +13,13 @@
 class Task < ApplicationRecord
   belongs_to :category
   belongs_to :owner, class_name: 'User'
+  has_many :participating_users, class_name: 'Participant'
+  has_many :participants, through: :participating_users, source: :user
+
+  validates :participating_users, presence: true
+
+  accepts_nested_attributes_for :participating_users, reject_if: :all_blank, allow_destroy: true
+  # accepts_nested_attributes_for :participating_users, reject_if: :all_blank, allow_destroy: true
   validates :name, :description, presence: true
   validates :name, uniqueness: {case_sensitive: false}
   validate :due_date_validity

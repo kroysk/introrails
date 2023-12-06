@@ -39,6 +39,9 @@ gem "hamlit"
 gem "simple_form"
 gem "annotate"
 gem "devise"
+gem 'jquery-rails'
+gem 'cocoon'
+gem 'vanilla_nested'
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
