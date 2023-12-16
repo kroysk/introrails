@@ -27,5 +27,5 @@ RUN yarn add bootstrap jquery popper.js roboto-fontface vanilla-nested
 EXPOSE 3000
 
 # Comando por defecto al ejecutar el contenedor
-CMD ["bash","-c", "rm -f tmp/pids/server.pid"]
+CMD ["bash","-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"]
 # CMD ["bash", "-c", "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"]

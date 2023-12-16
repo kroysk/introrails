@@ -1,9 +1,9 @@
 # == Schema Information
 #
-# Table name: participants
+# Table name: notes
 #
 #  id         :bigint           not null, primary key
-#  role       :integer
+#  body       :text
 #  user_id    :bigint           not null
 #  task_id    :bigint           not null
 #  created_at :datetime         not null
@@ -11,7 +11,7 @@
 #
 require "test_helper"
 
-class ParticipantTest < ActiveSupport::TestCase
+class NoteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
